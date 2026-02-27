@@ -94,6 +94,12 @@ sumData(50,60,30,120);
  let profit = productPrice(price + 10)
  console.log(profit);
 
+// ================= Anonymous Function =======================
+
+// Def: anonymous fn. has no name . it's usually stored in a variable or used directly as a callback.
 
 
-
+const showMsg= function(){
+    console.log("Learning Anonymous function");
+}
+showMsg();
