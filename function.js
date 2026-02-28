@@ -82,7 +82,6 @@ function sumData(...allElement){
 }
 sumData(50,60,30,120);
 
-*/
 
 
 //==========================  return type ======================================//
@@ -103,3 +102,73 @@ const showMsg= function(){
     console.log("Learning Anonymous function");
 }
 showMsg();
+
+
+
+//=============== callback =======================
+
+//Def: A callback function is a function passed to another function an argument and executed later .
+
+function addData(num1,num2){
+    return (num1 + num2);
+}
+function minData(num1,num2){
+    return(num1-num2);
+}
+
+function calculate(num1,num2, callback){
+   // console.log(num1);
+   // console.log(num2);
+   // console.log(callback);
+    console.log("final result",callback(num1,num2));
+}
+calculate(30,20,addData);
+calculate(50,10,minData);
+
+//2. ques.  */
+
+function greet(callback){
+    console.log("welcome to innovationTech");
+    callback();
+}
+function display(){
+    console.log("hello,bye...");
+}
+greet(display);
+
+
+//================== Arrow function (ES6)========================
+
+//def: arrow function offer ashorter syntax than regular function
+//syntax:
+ 
+const functionName= (para1,para2)=>{
+    // code
+}
+
+
+//1.
+let show= ()=>{
+    console.log("WELCOME");
+}
+show();
+
+//2.
+let sum=(n1,n2)=>{
+    return n1 + n2;
+}
+let addData1= sum(50,70);
+console.log(addData1);
+// console.log(sum(50,70)); 
+
+//3.
+let square = (x) =>  x*x;
+console.log(square(5));
+// or
+let square1 = x =>  x*x;
+console.log(square1(6));
+// or  curli-braces hi to return likhna jaruri hi
+let square3 = (x) => {
+    return x*x;
+} 
+console.log(square3(10));
